@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>cn.yqyzt</groupId>
+  <artifactId>core</artifactId>
+  <version>1.0.0</version>
+  <packaging>jar</packaging>
+  <parent>
+    <groupId>cn.yqyzt</groupId>
+    <artifactId>parent</artifactId>
+    <version>1.0.0</version>
+  </parent>
+  <properties>
+    <!--自定义依赖版本-->
+    <druidstarter.version>1.1.17</druidstarter.version>
+    <mybatisstarter.version>1.3.0</mybatisstarter.version>
+    <!--<aspectjweaver.version>1.8.13</aspectjweaver.version>
+    <aspectjrt.version>1.8.9</aspectjrt.version>-->
+    <aspects.version>3.2.8.RELEASE</aspects.version>
+    <redis.version>2.2.2.RELEASE</redis.version>
+  </properties>
+  <dependencies>
+    <!--  alibaba druid -->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid-spring-boot-starter</artifactId>
+      <version>${druidstarter.version}</version>
+    </dependency>
+    <!--mysql 驱动-->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+    </dependency>
+    <!--jdbc 提供事务相关的装配-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-jdbc</artifactId>
+    </dependency>
+    <!--mybatis starter-->
+    <dependency>
+      <groupId>org.mybatis.spring.boot</groupId>
+      <artifactId>mybatis-spring-boot-starter</artifactId>
+      <version>${mybatisstarter.version}</version>
+    </dependency>
+    <!-- aop -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-aop</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aspects</artifactId>
+      <version>${aspects.version}</version>
+    </dependency>
+    <!--redis-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-redis</artifactId>
+      <version>${redis.version}</version>
+    </dependency>
+  </dependencies>
+</project>

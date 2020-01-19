@@ -1,0 +1,7 @@
+server:
+  port: 8002
+
+#�Զ�����־����
+log:
+  path: E:/logs/boot-maven-dev
+  level: DEBUG

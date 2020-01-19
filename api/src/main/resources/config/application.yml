@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: dev
+  # thymeleaf
+  thymeleaf:
+    prefix: classpath:/templates/
+    check-template-location: true
+    suffix: .html
+    encoding: UTF-8
+    servlet.content-type: text/html
+    mode: HTML
+    cache: false
+server:
+  servlet:
+    context-path: /api
+
+logging:
+  config: classpath:config/logback.xml

@@ -1,0 +1,7 @@
+server:
+  port: 9001
+
+#自定义日志配置
+log:
+  path: E:/logs/boot-maven-prod
+  level: INFO

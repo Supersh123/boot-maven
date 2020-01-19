@@ -1,0 +1,29 @@
+#开启佛祖banner ^_^
+#spring.main.banner-mode=off
+#druid datasource配置
+spring:
+  datasource:
+      druid:
+          username: shenhao
+          password: Supersh123
+          url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          initial-size: 5
+  banner:
+      location: classpath:config/banner.txt
+
+#mybatis扫描Mapper映射文件
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+#打印sql
+logging:
+  level:
+    cn:
+      yqyzt:
+        dao: debug
+
+redis:
+  host: 127.0.0.1
+  port: 6379
+  database: 0
+  password:
